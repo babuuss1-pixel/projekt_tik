@@ -1,0 +1,257 @@
+/* ======================
+   OJQ PROJECT - STYLE.CSS
+   ====================== */
+
+:root{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --text:#ffffff;
+  --muted:#cbd5e1;
+  --primary:#38bdf8;
+  --accent:#2563eb;
+  --gradient:linear-gradient(135deg,#1e3a8a,#2563eb,#38bdf8);
+}
+
+/* DARK MODE OVERRIDE (JS will toggle .light-mode on body) */
+body.light-mode{
+  --bg:#f1f5f9;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#334155;
+  --primary:#2563eb;
+  --accent:#1e3a8a;
+  --gradient:linear-gradient(135deg,#60a5fa,#3b82f6,#2563eb);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s ease;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(12px);
+  z-index:1000;
+}
+
+.logo{
+  font-size:1.5rem;
+  font-weight:800;
+  color:var(--primary);
+}
+
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--text);
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:var(--primary);
+}
+
+#darkModeBtn{
+  background:var(--primary);
+  border:none;
+  padding:8px 12px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  padding:20px;
+}
+
+.hero-content h1{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+.hero-content p{
+  max-width:700px;
+  color:var(--muted);
+  margin:0 auto;
+}
+
+.main-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:var(--primary);
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.main-btn:hover{
+  transform:scale(1.05);
+  background:var(--accent);
+}
+
+/* SECTION */
+section{
+  padding:80px 10%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:2.2rem;
+}
+
+.line{
+  width:80px;
+  height:4px;
+  background:var(--primary);
+  margin:10px auto;
+  border-radius:5px;
+}
+
+/* CARDS */
+.cards-grid, .intro-grid, .stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card, .intro-card, .stat-card, .info-box{
+  background:var(--card);
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover, .intro-card:hover, .stat-card:hover, .info-box:hover{
+  transform:translateY(-8px);
+}
+
+.card h3, .intro-card h3, .info-box h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.card p, .intro-card p, .info-box p{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* IMAGES */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* STATS BAR */
+.bar{
+  width:100%;
+  height:10px;
+  background:#334155;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.bar div{
+  height:100%;
+  background:var(--primary);
+  width:0;
+  animation:fill 2s forwards;
+}
+
+@keyframes fill{
+  from{width:0;}
+  to{width:100%;}
+}
+
+/* TIMELINE */
+.timeline-item{
+  margin-bottom:20px;
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+}
+
+.timeline-number{
+  width:40px;
+  height:40px;
+  background:var(--primary);
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  font-weight:bold;
+}
+
+/* QUOTE */
+.quote-box{
+  text-align:center;
+  font-size:1.2rem;
+  font-style:italic;
+  color:var(--muted);
+  padding:30px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#020617;
+  color:var(--muted);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-content h1{
+    font-size:2rem;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:10px;
+  }
+}
