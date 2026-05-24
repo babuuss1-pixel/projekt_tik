@@ -1,291 +1,666 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Rreth OJQ-ve</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OJQ "Ndihmë për Nesër" | Faqe Prezantuese</title>
+  <meta name="description" content="Faqe moderne për një organizatë joqeveritare me mision social, projekte, vullnetarë, donacione dhe ndikim në komunitet." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div id="progress-bar"></div>
 
-  <nav class="navbar">
-
-    <div class="logo">OJQ</div>
-
-    <ul class="nav-links">
-      <li><a href="rendesia.html">Rëndësia</a></li>
-      <li><a href="rreth.html">Rreth</a></li>
-      <li><a href="shembuj.html">Shembuj</a></li>
-      <li><a href="statistika.html">Statistika</a></li>
-      <li><a href="aktivitete.html">Aktivitete</a></li>
-    </ul>
-
-    <button id="darkModeBtn">🌙</button>
-
-  </nav>
-
-  <header class="hero hero-rreth">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-      <h1>Çfarë janë OJQ-të?</h1>
-
-      <p>
-        Organizatat Joqeveritare janë organizata të pavarura
-        që punojnë për të ndihmuar komunitetin dhe shoqërinë.
-      </p>
-
-      <a href="#info" class="main-btn">
-        Mëso Më Shumë
+  <header class="header">
+    <div class="container nav">
+      <a href="#hero" class="logo">
+        <span class="logo-icon">🌍</span>
+        <span class="logo-text">OJQ <strong>Ndihmë për Nesër</strong></span>
       </a>
 
-    </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#rreth-nesh">Rreth nesh</a>
+        <a href="#projektet">Projektet</a>
+        <a href="#ndikimi">Ndikimi</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#ekipi">Ekipi</a>
+        <a href="#faq">Pyetje</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
 
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Ndrysho temën">🌙</button>
+        <button id="openDonateModal" class="btn btn-primary">Dhuro tani</button>
+        <button id="menuToggle" class="icon-btn mobile-only" aria-label="Hap menunë">☰</button>
+      </div>
+    </div>
   </header>
 
-  <section id="info">
+  <main>
+    <section class="hero section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Organizatë Joqeveritare</span>
+          <h1>Të ndërtojmë një komunitet më të fortë, më të drejtë dhe më të gjelbër</h1>
+          <p class="lead">
+            OJQ “Ndihmë për Nesër” punon për fuqizimin e të rinjve, mbrojtjen e mjedisit,
+            ndihmën sociale dhe zhvillimin e projekteve të qëndrueshme për komunitetin.
+          </p>
 
-    <div class="section-title">
-      <h2>Rreth OJQ-ve</h2>
-      <div class="line"></div>
-    </div>
+          <div class="hero-buttons">
+            <a href="#kontakt" class="btn btn-primary">Bëhu vullnetar</a>
+            <a href="#projektet" class="btn btn-secondary">Shiko projektet</a>
+            <button id="downloadBrochure" class="btn btn-outline">Shkarko broshurën</button>
+          </div>
 
-    <div class="info-box">
+          <div class="hero-badges">
+            <span>✔ Transparencë</span>
+            <span>✔ Vullnetarizëm</span>
+            <span>✔ Ndikim real</span>
+          </div>
+        </div>
 
-      <p>
-        Organizatat joqeveritare janë organizata të pavarura nga shteti
-        që punojnë për të ndihmuar shoqërinë dhe komunitetin.
-        Ato nuk kanë qëllim fitimin e parave, por përmirësimin
-        e jetës së njerëzve.
-      </p>
+        <div class="hero-visual">
+          <div class="hero-card glass">
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+              alt="Vullnetarë duke punuar së bashku"
+            />
+            <div class="hero-card-content">
+              <h3>Komunitet aktiv</h3>
+              <p>Ne krijojmë mundësi konkrete për qytetarë, familje dhe të rinj.</p>
+            </div>
+          </div>
 
-    </div>
+          <div class="floating-stat floating-stat-1">
+            <strong data-target="1250">0</strong>
+            <span>përfitues</span>
+          </div>
 
-  </section>
-
-  <section>
-
-    <div class="section-title">
-      <h2>Fushat Kryesore ku Veprojnë</h2>
-      <div class="line"></div>
-    </div>
-
-    <div class="cards-grid">
-
-      <div class="card">
-
-        <h3>🌱 Mbrojtja e Mjedisit</h3>
-
-        <p>• Pastrimi i mjedisit</p>
-        <p>• Mbjellja e pemëve</p>
-        <p>• Lufta kundër ndotjes</p>
-
+          <div class="floating-stat floating-stat-2">
+            <strong data-target="48">0</strong>
+            <span>projekte</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
+    <section class="section light-section" id="rreth-nesh">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Rreth organizatës</span>
+          <h2>Kush jemi ne</h2>
+          <p>
+            Ne jemi një organizatë joqeveritare e përkushtuar ndaj përmirësimit të jetës në komunitet
+            përmes edukimit, mbështetjes sociale, mjedisit dhe aktivizmit qytetar.
+          </p>
+        </div>
 
-        <h3>📚 Arsimi dhe Rinia</h3>
+        <div class="cards-grid three">
+          <article class="info-card">
+            <div class="card-icon">🎯</div>
+            <h3>Misioni</h3>
+            <p>
+              Të ofrojmë zgjidhje konkrete për sfidat sociale dhe të nxisim pjesëmarrjen aktive
+              të komunitetit në zhvillimin lokal.
+            </p>
+          </article>
 
-        <p>• Trajnime për të rinjtë</p>
-        <p>• Aktivitete edukative</p>
-        <p>• Projekte kulturore</p>
+          <article class="info-card">
+            <div class="card-icon">👁️</div>
+            <h3>Vizioni</h3>
+            <p>
+              Një shoqëri e barabartë, gjithëpërfshirëse dhe e qëndrueshme, ku secili ka mundësi
+              të kontribuojë dhe të përparojë.
+            </p>
+          </article>
 
+          <article class="info-card">
+            <div class="card-icon">💚</div>
+            <h3>Vlerat</h3>
+            <p>
+              Integritet, bashkëpunim, transparencë, respekt për njeriun dhe përkushtim ndaj ndryshimit pozitiv.
+            </p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-
-        <h3>❤️ Ndihma Humanitare</h3>
-
-        <p>• Ndihmë për familjet në nevojë</p>
-        <p>• Ndihmë gjatë fatkeqësive natyrore</p>
-        <p>• Mbështetje për fëmijët dhe të moshuarit</p>
-
+    <section class="section stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-box">
+            <h3 data-target="320">0</h3>
+            <p>Vullnetarë aktivë</p>
+          </div>
+          <div class="stat-box">
+            <h3 data-target="48">0</h3>
+            <p>Projekte të realizuara</p>
+          </div>
+          <div class="stat-box">
+            <h3 data-target="1250">0</h3>
+            <p>Përfitues direkt</p>
+          </div>
+          <div class="stat-box">
+            <h3 data-target="87">0</h3>
+            <p>Partnerë institucionalë</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
+    <section class="section" id="projektet">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Projektet tona</span>
+          <h2>Fusha kryesore të veprimit</h2>
+          <p>
+            Organizata jonë ndërton programe me ndikim afatgjatë për të rinjtë, familjet, shkollat dhe ambientin.
+          </p>
+        </div>
 
-        <h3>⚖️ Të Drejtat e Njeriut</h3>
+        <div class="cards-grid four">
+          <article class="project-card">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Edukimi i të rinjve" />
+            <div class="project-content">
+              <span class="tag">Edukimi</span>
+              <h3>Qendra të mësimit dhe mentorimit</h3>
+              <p>Trajnime, kurse falas, mentorim dhe mbështetje akademike për të rinjtë.</p>
+              <button class="btn btn-small more-btn">Më shumë</button>
+            </div>
+          </article>
 
-        <p>• Barazia dhe liria</p>
-        <p>• Mbrojtja e të drejtave të grave dhe fëmijëve</p>
-        <p>• Lufta kundër diskriminimit</p>
+          <article class="project-card">
+            <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=900&q=80" alt="Mbrojtja e mjedisit" />
+            <div class="project-content">
+              <span class="tag">Mjedisi</span>
+              <h3>Aksione të gjelbra dhe riciklim</h3>
+              <p>Pastrime publike, mbjellje pemësh dhe edukim për mbrojtjen e natyrës.</p>
+              <button class="btn btn-small more-btn">Më shumë</button>
+            </div>
+          </article>
 
+          <article class="project-card">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80" alt="Mbështetje për familjet" />
+            <div class="project-content">
+              <span class="tag">Sociale</span>
+              <h3>Mbështetje për familjet në nevojë</h3>
+              <p>Paketa ushqimore, ndihmë emergjente, këshillim dhe orientim social.</p>
+              <button class="btn btn-small more-btn">Më shumë</button>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Përfshirja e të rinjve" />
+            <div class="project-content">
+              <span class="tag">Aktivizëm</span>
+              <h3>Fuqizimi i të rinjve dhe grave</h3>
+              <p>Programe lidershipi, punëtori, aftësi digjitale dhe sipërmarrje sociale.</p>
+              <button class="btn btn-small more-btn">Më shumë</button>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
+    <section class="section light-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Diagram i punës sonë</span>
+          <h2>Si funksionon organizata jonë</h2>
+          <p>
+            Donatorët, partnerët dhe vullnetarët kontribuojnë në projekte konkrete që sjellin ndikim të matshëm në komunitet.
+          </p>
+        </div>
 
-  </section>
+        <div class="diagram-card">
+          <svg viewBox="0 0 1100 380" class="process-diagram" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#21c58e"/>
+                <stop offset="100%" stop-color="#2f80ed"/>
+              </linearGradient>
+            </defs>
 
-  <section class="importance-banner">
+            <rect x="40" y="120" rx="20" ry="20" width="200" height="110" fill="#e9fff7"/>
+            <text x="140" y="165" text-anchor="middle" font-size="24" fill="#183b2f" font-weight="700">Donatorë</text>
+            <text x="140" y="195" text-anchor="middle" font-size="16" fill="#183b2f">Biznese • Individë • Partnerë</text>
 
-    <div class="banner-content">
+            <rect x="300" y="120" rx="20" ry="20" width="200" height="110" fill="#eef5ff"/>
+            <text x="400" y="165" text-anchor="middle" font-size="24" fill="#123257" font-weight="700">OJQ</text>
+            <text x="400" y="195" text-anchor="middle" font-size="16" fill="#123257">Planifikim • Menaxhim • Transparencë</text>
 
-      <h2>Rëndësia e OJQ-ve</h2>
+            <rect x="560" y="120" rx="20" ry="20" width="220" height="110" fill="#fff6ea"/>
+            <text x="670" y="165" text-anchor="middle" font-size="24" fill="#674500" font-weight="700">Projektet</text>
+            <text x="670" y="195" text-anchor="middle" font-size="16" fill="#674500">Edukim • Mjedis • Sociale</text>
 
-      <p>
-        OJQ-të kanë rol shumë të rëndësishëm në zhvillimin
-        dhe përmirësimin e jetës së komunitetit.
-      </p>
+            <rect x="840" y="120" rx="20" ry="20" width="220" height="110" fill="#f4ecff"/>
+            <text x="950" y="165" text-anchor="middle" font-size="24" fill="#4b2d7f" font-weight="700">Komuniteti</text>
+            <text x="950" y="195" text-anchor="middle" font-size="16" fill="#4b2d7f">Ndikim • Përfitues • Ndryshim</text>
 
-    </div>
+            <path d="M240 175 C265 175, 275 175, 300 175" stroke="url(#grad1)" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <path d="M500 175 C525 175, 535 175, 560 175" stroke="url(#grad1)" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <path d="M780 175 C805 175, 815 175, 840 175" stroke="url(#grad1)" stroke-width="8" fill="none" stroke-linecap="round"/>
 
-  </section>
+            <circle cx="400" cy="70" r="40" fill="#d8fff1"/>
+            <text x="400" y="78" text-anchor="middle" font-size="18" fill="#0d5c46" font-weight="700">+320</text>
+            <text x="400" y="102" text-anchor="middle" font-size="13" fill="#0d5c46">Vullnetarë</text>
 
-  <section>
+            <circle cx="670" cy="70" r="40" fill="#dcebff"/>
+            <text x="670" y="78" text-anchor="middle" font-size="18" fill="#1a4f8f" font-weight="700">48</text>
+            <text x="670" y="102" text-anchor="middle" font-size="13" fill="#1a4f8f">Projekte</text>
 
-    <div class="section-title">
-      <h2>Pse janë të rëndësishme?</h2>
-      <div class="line"></div>
-    </div>
+            <circle cx="950" cy="70" r="40" fill="#efe2ff"/>
+            <text x="950" y="78" text-anchor="middle" font-size="18" fill="#6637a8" font-weight="700">1250+</text>
+            <text x="950" y="102" text-anchor="middle" font-size="13" fill="#6637a8">Përfitues</text>
+          </svg>
+        </div>
+      </div>
+    </section>
 
-    <div class="cards-grid">
+    <section class="section" id="ndikimi">
+      <div class="container impact-grid">
+        <div>
+          <div class="section-heading left">
+            <span class="eyebrow">Ndikimi ynë</span>
+            <h2>Rezultate të matshme çdo vit</h2>
+            <p>
+              Grafikoni i mëposhtëm paraqet rritjen e numrit të përfituesve nga programet tona gjatë viteve të fundit.
+            </p>
+          </div>
 
-      <div class="info-box">
+          <div class="chart-card">
+            <canvas id="impactChart" width="700" height="360"></canvas>
+          </div>
+        </div>
 
-        <h3>🤝 Ndihmojnë Komunitetin</h3>
+        <aside class="impact-sidebar">
+          <div class="goal-card">
+            <h3>Objektivi vjetor</h3>
+            <p>Mbështetje për 1,500 përfitues deri në fund të vitit.</p>
+            <div class="progress-wrap">
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 83%"></div>
+              </div>
+              <span>83%</span>
+            </div>
+          </div>
 
+          <div class="goal-card">
+            <h3>Kalkulator i donacionit</h3>
+            <label for="donationRange">Shuma e donacionit: <strong id="donationValue">25€</strong></label>
+            <input type="range" id="donationRange" min="5" max="200" value="25" />
+            <p id="donationImpact">
+              Ky donacion mund të ndihmojë në sigurimin e materialeve bazë për 2 fëmijë.
+            </p>
+            <button class="btn btn-primary full" id="quickDonateBtn">Kontribuo këtë shumë</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section light-section" id="galeria">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Galeria</span>
+          <h2>Momente nga aktivitetet tona</h2>
+          <p>Filtro fotot sipas kategorisë për të parë lloje të ndryshme aktivitetesh.</p>
+        </div>
+
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Të gjitha</button>
+          <button class="filter-btn" data-filter="komunitet">Komunitet</button>
+          <button class="filter-btn" data-filter="edukim">Edukim</button>
+          <button class="filter-btn" data-filter="mjedis">Mjedis</button>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item" data-category="komunitet">
+            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80" alt="Aktivitet komunitar" />
+            <figcaption>Takim me komunitetin</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="edukim">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=900&q=80" alt="Trajnim për të rinjtë" />
+            <figcaption>Trajnim për të rinjtë</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="mjedis">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=80" alt="Aksion pastrimi" />
+            <figcaption>Aksion pastrimi</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="komunitet">
+            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80" alt="Ndihmë sociale" />
+            <figcaption>Mbështetje për familjet</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="edukim">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Punëtori edukative" />
+            <figcaption>Punëtori dhe mentorim</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="mjedis">
+            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Mbjellje pemësh" />
+            <figcaption>Mbjellje pemësh</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Rruga jonë</span>
+          <h2>Timeline e zhvillimit</h2>
+          <p>Një përmbledhje e shkurtër e etapave kryesore të organizatës sonë.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-content">
+              <h3>Themelimi i organizatës</h3>
+              <p>U krijua grupi i parë i vullnetarëve dhe u definuan objektivat fillestare.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-content">
+              <h3>Projektet e para komunitare</h3>
+              <p>U zbatuan aktivitetet e para në fushën sociale dhe të edukimit joformal.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-content">
+              <h3>Zgjerimi i partneriteteve</h3>
+              <p>Organizata bashkëpunoi me shkolla, komuna dhe biznese lokale.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+              <h3>Rritje e ndikimit</h3>
+              <p>Numri i përfituesve, vullnetarëve dhe projekteve u rrit ndjeshëm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light-section" id="ekipi">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Ekipi ynë</span>
+          <h2>Njerëzit pas ndryshimit</h2>
+          <p>Një ekip i përkushtuar që udhëheq, koordinon dhe zbaton projektet me kujdes dhe profesionalizëm.</p>
+        </div>
+
+        <div class="cards-grid four">
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Drejtoresha Ekzekutive" />
+            <h3>Arta Gashi</h3>
+            <p>Drejtoreshë Ekzekutive</p>
+          </article>
+
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Koordinator i Projekteve" />
+            <h3>Ilir Krasniqi</h3>
+            <p>Koordinator i Projekteve</p>
+          </article>
+
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=900&q=80" alt="Specialiste e Komunikimit" />
+            <h3>Lea Dervishi</h3>
+            <p>Specialiste e Komunikimit</p>
+          </article>
+
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Menaxher i Vullnetarëve" />
+            <h3>Besnik Hoxha</h3>
+            <p>Menaxher i Vullnetarëve</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Dëshmi</span>
+          <h2>Çfarë thonë përfituesit dhe partnerët</h2>
+        </div>
+
+        <div class="cards-grid three">
+          <article class="testimonial-card">
+            <p>
+              “Falë mbështetjes së organizatës, fëmijët tanë morën materiale shkollore dhe ndihmë për mësim.”
+            </p>
+            <h4>— Prind nga komuniteti</h4>
+          </article>
+
+          <article class="testimonial-card">
+            <p>
+              “Punëtoritë për të rinjtë ishin shumë të vlefshme dhe na ndihmuan të zhvillojmë aftësi praktike.”
+            </p>
+            <h4>— Pjesëmarrëse në trajnim</h4>
+          </article>
+
+          <article class="testimonial-card">
+            <p>
+              “Një partner i besueshëm me organizim serioz, raportim të qartë dhe ndikim të dukshëm.”
+            </p>
+            <h4>— Partner institucional</h4>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Pyetje të shpeshta</span>
+          <h2>Informacion i shpejtë për vizitorët</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question">
+              Si mund të bëhem vullnetar?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Mund të plotësosh formularin më poshtë dhe ekipi ynë do të të kontaktojë për hapat e ardhshëm.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Si mund të bëj një donacion?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Mund të klikosh butonin “Dhuro tani” dhe të zgjedhësh shumën e donacionit që dëshiron të kontribuosh.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              A bashkëpunoni me shkolla dhe institucione?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Po, organizata jonë është e hapur për bashkëpunime me institucione, shkolla, biznese dhe grupe komunitare.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              A ofroni raporte mbi aktivitetet?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Po, ne publikojmë raporte periodike mbi projektet, shpenzimet, arritjet dhe ndikimin në komunitet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light-section" id="kontakt">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-heading left">
+            <span class="eyebrow">Na kontakto</span>
+            <h2>Bashkohu me misionin tonë</h2>
+            <p>
+              Nëse dëshiron të bëhesh vullnetar, partner apo mbështetës, plotëso formularin dhe ne do të të kontaktojmë.
+            </p>
+          </div>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <h3>Email</h3>
+              <p>info@ndihmeperneser.org</p>
+            </div>
+            <div class="contact-card">
+              <h3>Telefoni</h3>
+              <p>+355 69 123 4567</p>
+            </div>
+            <div class="contact-card">
+              <h3>Adresa</h3>
+              <p>Tiranë, Shqipëri</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <form id="volunteerForm">
+            <div class="form-row">
+              <div class="input-group">
+                <label for="name">Emri dhe mbiemri</label>
+                <input type="text" id="name" placeholder="Shkruaj emrin" />
+                <small class="error-text"></small>
+              </div>
+
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Shkruaj email-in" />
+                <small class="error-text"></small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <label for="city">Qyteti</label>
+                <input type="text" id="city" placeholder="P.sh. Tiranë" />
+              </div>
+
+              <div class="input-group">
+                <label for="interest">Interesi kryesor</label>
+                <select id="interest">
+                  <option value="">Zgjidh një fushë</option>
+                  <option>Edukimi</option>
+                  <option>Mjedisi</option>
+                  <option>Mbështetje sociale</option>
+                  <option>Komunikim dhe media</option>
+                  <option>Menaxhim eventesh</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="message">Mesazhi yt</label>
+              <textarea id="message" rows="5" placeholder="Na trego pse dëshiron të bashkohesh..."></textarea>
+              <small class="error-text"></small>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Dërgo aplikimin</button>
+              <button type="reset" class="btn btn-secondary">Pastro fushat</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section newsletter-section">
+      <div class="container newsletter-box">
+        <div>
+          <span class="eyebrow">Newsletter</span>
+          <h2>Merr lajmet dhe aktivitetet tona</h2>
+          <p>Regjistrohu për të marrë njoftime mbi projektet, eventet dhe fushatat e ardhshme.</p>
+        </div>
+
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Shkruaj email-in tënd" />
+          <button type="submit" class="btn btn-primary">Abonohu</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>OJQ “Ndihmë për Nesër”</h3>
         <p>
-          OJQ-të organizojnë aktivitete dhe projekte
-          për të ndihmuar njerëzit në nevojë.
+          Ne besojmë se ndryshimi i madh fillon me hapa të vegjël, por të përkushtuar.
         </p>
-
       </div>
 
-      <div class="info-box">
-
-        <h3>📢 Rrisin Ndërgjegjësimin</h3>
-
-        <p>
-          Ato informojnë njerëzit për probleme sociale,
-          mjedisore dhe humanitare.
-        </p>
-
+      <div>
+        <h4>Lidhje të shpejta</h4>
+        <ul>
+          <li><a href="#rreth-nesh">Rreth nesh</a></li>
+          <li><a href="#projektet">Projektet</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
       </div>
 
-      <div class="info-box">
-
-        <h3>🌍 Mbrojnë Mjedisin</h3>
-
-        <p>
-          Organizatat zhvillojnë aktivitete për mbrojtjen
-          dhe pastrimin e mjedisit.
-        </p>
-
+      <div>
+        <h4>Na ndiq</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
       </div>
-
-      <div class="info-box">
-
-        <h3>❤️ Ndihmojnë Njerëzit</h3>
-
-        <p>
-          OJQ-të ndihmojnë familjet, fëmijët dhe të moshuarit
-          në situata të vështira.
-        </p>
-
-      </div>
-
     </div>
 
-  </section>
-
-  <section>
-
-    <div class="section-title">
-      <h2>Problemet që Hasin OJQ-të</h2>
-      <div class="line"></div>
+    <div class="container footer-bottom">
+      <p>© 2026 OJQ “Ndihmë për Nesër”. Të gjitha të drejtat e rezervuara.</p>
     </div>
-
-    <div class="cards-grid">
-
-      <div class="card">
-
-        <h3>💰 Mungesa e Financimeve</h3>
-
-        <p>
-          Shumë organizata kanë vështirësi në sigurimin
-          e fondeve për projektet e tyre.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>🙋 Mungesa e Vullnetarëve</h3>
-
-        <p>
-          Jo gjithmonë ka mjaftueshëm njerëz që marrin
-          pjesë si vullnetarë.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>📋 Vështirësi në Organizim</h3>
-
-        <p>
-          Organizimi i aktiviteteve dhe projekteve
-          kërkon kohë dhe bashkëpunim.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>🏛️ Mungesa e Mbështetjes</h3>
-
-        <p>
-          Disa OJQ nuk marrin mbështetjen e nevojshme
-          nga institucionet.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="quote-section">
-
-    <div class="quote-box">
-
-      <p>
-        “OJQ-të janë një urë lidhëse mes njerëzve
-        dhe një shoqërie më të mirë.”
-      </p>
-
-    </div>
-
-  </section>
-
-  <footer>
-
-    <div class="footer-content">
-
-      <h3>Organizatat Joqeveritare</h3>
-
-      <p>Projekt IT • Klasa X-K</p>
-
-      <p>Punuar nga grupi III</p>
-
-    </div>
-
   </footer>
 
-  <script src="dark.js"></script>
-  <script src="random.js"></script>
+  <button id="backToTop" class="back-to-top" aria-label="Kthehu lart">↑</button>
 
+  <div id="donateModal" class="modal hidden">
+    <div class="modal-overlay" id="closeDonateModal"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="closeDonateX">×</button>
+      <span class="eyebrow">Donacion online</span>
+      <h2>Mbështet një projekt me ndikim</h2>
+      <p>Zgjidh shumën që dëshiron të dhurosh dhe vazhdo me kontributin tënd.</p>
+
+      <div class="donation-options">
+        <button class="donation-choice">10€</button>
+        <button class="donation-choice active">25€</button>
+        <button class="donation-choice">50€</button>
+        <button class="donation-choice">100€</button>
+      </div>
+
+      <button class="btn btn-primary full" id="finalDonateBtn">Vazhdo me donacionin</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Mesazhi u dërgua me sukses!</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
